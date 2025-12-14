@@ -2,6 +2,7 @@
 
 ![Docker + Spring AI](https://img.shields.io/badge/Docker-Spring%20AI-blue)
 
+Video: https://www.youtube.com/watch?v=6E6JFLMHcoQ
 ## Unleash Local AI Models with Docker and Spring Boot
 
 Looking to harness AI models locally without relying on cloud providers? This project demonstrates how to connect a Spring Boot application to [Docker's Model Runner feature](https://docs.docker.com/desktop/features/model-runner/), allowing you to interact with AI models that run directly on your machine.
@@ -13,16 +14,16 @@ No API keys needed for OpenAI or other providers - your data stays local, and yo
 This application showcases the integration between:
 
 - Docker Desktop's Model Runner (Beta feature, requires Docker Desktop 4.40 or later)
-- Spring Boot 3.4.4
+- Spring Boot 3.5.8
 - Spring AI framework
-- Java 24
+- Java 17
 
 The app sends prompts to locally running AI models through Docker's OpenAI-compatible API endpoints, giving you full control over your AI interactions while benefiting from the Spring AI abstraction layer.
 
 ## Project Requirements
 
 - Docker Desktop 4.40 or later (latest version required) with Apple Silicon (M1/M2/M3)
-- Java 24 JDK
+- Java 17 JDK
 - Maven build tool
 - Available RAM for model loading (requirements vary by model)
 
@@ -37,7 +38,7 @@ The project relies on the following core dependencies:
 </dependency>
 <dependency>
     <groupId>org.springframework.ai</groupId>
-    <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+	 <artifactId>spring-ai-starter-model-openai</artifactId>
 </dependency>
 ```
 
@@ -81,6 +82,7 @@ You can check available models with:
 
 ```bash
 docker model list
+docker model run ai/gemma3
 ```
 
 ### 3. Configure Your Application
