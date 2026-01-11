@@ -22,7 +22,10 @@ public class ImageAnalysisController {
     public ImageAnalysisController(OpenAiChatModel chatModel) {
         this.chatModel = chatModel;
     }
-
+    /***
+     * curl -X POST "http://localhost:8063/analyze" -H "Accept: text/plain" -F "file=@C:\path\to\image.png;type=image/png"
+     * 
+     * **/
     @PostMapping("/analyze")
     public String analyzeImage(@RequestParam("file") MultipartFile file) throws IOException {
         // 1. Wrap the image data into a Media object
