@@ -17,12 +17,12 @@ public class Application {
 	@Bean
 	CommandLineRunner commandLineRunner(ChatClient.Builder builder) {
 		return args -> {
-		    var client = builder.build();
-			String response = client.prompt("When was Docker created?")
-					.call()
-					.content();
+		    // var client = builder.build();
+			// String response = client.prompt("When was Docker created?")
+			// 		.call()
+			// 		.content();
 
-			System.out.println(response);
+			// System.out.println(response);
 		};
 	}
 }

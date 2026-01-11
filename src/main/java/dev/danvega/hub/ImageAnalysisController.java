@@ -30,7 +30,7 @@ public class ImageAnalysisController {
 
         // 2. Create the user message with text and image
         UserMessage userMessage = UserMessage.builder()
-                          .text("Describe this image in detail.")
+                          .text("OCR this image in Traditional Chinese.")
                           .media(imageData).build();
 
         // 3. Create prompt with the message
